@@ -105,8 +105,8 @@ void loop() {
 
     // Get heart rate
     if (mmWave.getHeartRate(heart_rate)) {
-      // 🔧 Apply correction factor for Barn Owl (Tyto javanica javanica)
-      // ⚠️ NOTE: Adjust this +45.35 value if using with other species
+      // Apply correction factor for Barn Owl (Tyto javanica javanica)
+      // NOTE: Adjust this +45.35 value if using with other species
       float corrected_hr = heart_rate + 45.35;
 
       updateDisplay(LABEL_HEART, corrected_hr);
